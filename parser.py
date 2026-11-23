@@ -14,6 +14,7 @@ import pathlib as pl
 import re
 import subprocess
 import os
+from forensics import forensic
 
 #update basepath
 base_path = r" "
@@ -21,6 +22,7 @@ base_path = r" "
 key_jsonpath_mapping = {}
 
     
+@forensic
 def checkIfWeirdYAML(yaml_script):
     '''
     to filter invalid YAMLs such as ./github/workflows/ 
@@ -31,6 +33,7 @@ def checkIfWeirdYAML(yaml_script):
     return val 
 
 
+@forensic
 def keyMiner(dic_, value):
   '''
   If you give a value, then this function gets the corresponding key, and the keys that call the key 
@@ -53,6 +56,7 @@ def keyMiner(dic_, value):
 
 
 
+@forensic
 def getKeyRecursively(  dict_, list2hold,  depth_ = 0  ) :
     '''
     gives you ALL keys in a regular/nested dictionary 
@@ -74,6 +78,7 @@ def getKeyRecursively(  dict_, list2hold,  depth_ = 0  ) :
                 list2hold.append( (key_, depth_) ) 
     #print(list2hold)               
 
+@forensic
 def getValuesRecursively(  dict_   ) :
     '''
     gives you ALL values in a regular/nested dictionary 
@@ -108,7 +113,7 @@ def checkIfValidK8SYaml(path2yaml):
     return val2ret
 
 
-
+@forensic
 def getValsFromKey(dict_, target, list_holder  ):
     '''
     If you give a key, then this function gets the corresponding values 

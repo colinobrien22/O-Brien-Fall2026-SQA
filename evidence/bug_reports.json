@@ -1,0 +1,230 @@
+{
+    "random_seed": 6710,
+    "functions_tested": 10,
+    "total_tests": 1001,
+    "total_findings": 20,
+    "total_exception_occurrences": 19,
+    "total_logical_failures": 1,
+    "findings": [
+        {
+            "bug_id": "BUG-001",
+            "timestamp": "2026-11-23T20:42:39.915086+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 2,
+            "input_value": "None",
+            "input_type": "NoneType",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'NoneType' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'NoneType' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-002",
+            "timestamp": "2026-11-23T20:42:39.916981+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 3,
+            "input_value": "123",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-003",
+            "timestamp": "2026-11-23T20:42:39.920981+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 15,
+            "input_value": "False",
+            "input_type": "bool",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'bool' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'bool' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-004",
+            "timestamp": "2026-11-23T20:42:39.922001+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 18,
+            "input_value": "None",
+            "input_type": "NoneType",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'NoneType' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'NoneType' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-005",
+            "timestamp": "2026-11-23T20:42:39.924263+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 23,
+            "input_value": "None",
+            "input_type": "NoneType",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'NoneType' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'NoneType' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-006",
+            "timestamp": "2026-11-23T20:42:39.924703+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 24,
+            "input_value": "12345",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-007",
+            "timestamp": "2026-11-23T20:42:39.925106+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 25,
+            "input_value": "0",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-008",
+            "timestamp": "2026-11-23T20:42:39.927811+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 37,
+            "input_value": "None",
+            "input_type": "NoneType",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'NoneType' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'NoneType' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-009",
+            "timestamp": "2026-11-23T20:42:39.929082+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 42,
+            "input_value": "12345",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-010",
+            "timestamp": "2026-11-23T20:42:39.930324+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 47,
+            "input_value": "12345",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-011",
+            "timestamp": "2026-11-23T20:42:39.931164+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 50,
+            "input_value": "0",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-012",
+            "timestamp": "2026-11-23T20:42:39.933662+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 61,
+            "input_value": "None",
+            "input_type": "NoneType",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'NoneType' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'NoneType' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-013",
+            "timestamp": "2026-11-23T20:42:39.934084+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 62,
+            "input_value": "None",
+            "input_type": "NoneType",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'NoneType' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'NoneType' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-014",
+            "timestamp": "2026-11-23T20:42:39.936971+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 75,
+            "input_value": "None",
+            "input_type": "NoneType",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'NoneType' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'NoneType' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-015",
+            "timestamp": "2026-11-23T20:42:39.939309+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 85,
+            "input_value": "None",
+            "input_type": "NoneType",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'NoneType' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'NoneType' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-016",
+            "timestamp": "2026-11-23T20:42:39.939977+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 86,
+            "input_value": "0",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-017",
+            "timestamp": "2026-11-23T20:42:39.941029+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 90,
+            "input_value": "12345",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-018",
+            "timestamp": "2026-11-23T20:42:39.943665+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 95,
+            "input_value": "True",
+            "input_type": "bool",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'bool' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'bool' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-019",
+            "timestamp": "2026-11-23T20:42:39.945478+00:00",
+            "function": "parser.checkIfWeirdYAML",
+            "iteration": 98,
+            "input_value": "12345",
+            "input_type": "int",
+            "exception_type": "TypeError",
+            "exception_message": "argument of type 'int' is not iterable",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 183, in fuzz_parser\n    function(test_input)\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 129, in <lambda>\n    lambda data: parser.checkIfWeirdYAML(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/forensics.py\", line 85, in wrapper\n    result = function(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in checkIfWeirdYAML\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/O-Brien-Fall2026-SQA/parser.py\", line 31, in <genexpr>\n    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):\n             ^^^^^^^^^^^^^^^^^\nTypeError: argument of type 'int' is not iterable\n"
+        },
+        {
+            "bug_id": "BUG-020",
+            "timestamp": "2026-11-23T20:42:40.098305+00:00",
+            "function": "parser.getKeyRecursively",
+            "iteration": 0,
+            "input_value": "{'a': {'x': 1}, 'b': {'y': 2}, 'c': 3}",
+            "input_type": "dict",
+            "exception_type": "AssertionError",
+            "exception_message": "Incorrect recursion depth. Expected: [('a', 0), ('x', 1), ('b', 0), ('y', 1), ('c', 0)]. Actual: [('a', 0), ('x', 1), ('b', 1), ('y', 2), ('c', 2)]",
+            "stack_trace": "Traceback (most recent call last):\n  File \"/workspaces/O-Brien-Fall2026-SQA/fuzz.py\", line 223, in fuzz_logical_defects\n    raise AssertionError(\nAssertionError: Incorrect recursion depth. Expected: [('a', 0), ('x', 1), ('b', 0), ('y', 1), ('c', 0)]. Actual: [('a', 0), ('x', 1), ('b', 1), ('y', 2), ('c', 2)]\n"
+        }
+    ]
+}

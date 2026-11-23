@@ -12,6 +12,7 @@ import numpy as np
 import json
 from sarif_om import *
 from jschema_to_python.to_json import to_json
+from forensics import forensic
 
 '''Global SarifLog Object definition and Rule definition for SLI-KUBE. Rule IDs are ordered by the sequence as it appears in the TOSEM paper'''
 
@@ -70,6 +71,7 @@ def getYAMLFiles(path_to_dir):
                valid_.append(full_p_file)
     return valid_ 
 
+@forensic
 def isValidUserName(uName): 
     valid = True
     if (isinstance( uName , str)  ): 
@@ -81,6 +83,7 @@ def isValidUserName(uName):
         valid = False   
     return valid
 
+@forensic
 def isValidPasswordName(pName): 
     valid = True
     if (isinstance( pName , str)  ): 
@@ -92,6 +95,7 @@ def isValidPasswordName(pName):
         valid = False               
     return valid
 
+@forensic
 def isValidKey(keyName): 
     valid = False 
     if ( isinstance( keyName, str )  ):
@@ -103,6 +107,7 @@ def isValidKey(keyName):
         valid = False                      
     return valid    
 
+@forensic
 def checkIfValidSecret(single_config_val):
     flag2Ret = False 
     # print(type( single_config_val ), single_config_val  )
@@ -141,7 +146,7 @@ def scanPasswords(k_ , val_lis ):
                 hard_coded_pwds.append( val_ )
     return hard_coded_pwds
 
-
+@forensic
 def checkIfValidKeyValue(single_config_val):
     flag2Ret = False 
     if ( isinstance( single_config_val, str ) ):

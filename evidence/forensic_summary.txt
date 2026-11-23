@@ -1,0 +1,25 @@
+SLIKUBE FORENSIC ANALYSIS
+==================================================
+Total forensic records: 2444
+Unique functions: 10
+Total function executions: 1222
+Unmatched executions: 0
+
+Function execution counts:
+parser.checkIfWeirdYAML: 100
+parser.getKeyRecursively: 119
+parser.getValsFromKey: 125
+parser.getValuesRecursively: 189
+parser.keyMiner: 189
+scanner.checkIfValidKeyValue: 100
+scanner.checkIfValidSecret: 100
+scanner.isValidKey: 100
+scanner.isValidPasswordName: 100
+scanner.isValidUserName: 100
+
+Execution status counts:
+ERROR: 19
+SUCCESS: 1203
+
+Validation:
+All forensic validation checks PASSED

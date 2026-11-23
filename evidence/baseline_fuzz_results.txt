@@ -1,0 +1,68 @@
+
+Fuzzing scanner.isValidUserName()
+Completed 100 tests. Exceptions: 0
+
+Fuzzing scanner.isValidPasswordName()
+Completed 100 tests. Exceptions: 0
+
+Fuzzing scanner.isValidKey()
+Completed 100 tests. Exceptions: 0
+
+Fuzzing scanner.checkIfValidSecret()
+Completed 100 tests. Exceptions: 0
+
+Fuzzing scanner.checkIfValidKeyValue()
+Completed 100 tests. Exceptions: 0
+
+Fuzzing parser.checkIfWeirdYAML()
+Iteration 2: TypeError: argument of type 'NoneType' is not iterable
+Input: None
+Iteration 3: TypeError: argument of type 'int' is not iterable
+Input: 123
+Iteration 15: TypeError: argument of type 'bool' is not iterable
+Input: False
+Iteration 18: TypeError: argument of type 'NoneType' is not iterable
+Input: None
+Iteration 23: TypeError: argument of type 'NoneType' is not iterable
+Input: None
+Iteration 24: TypeError: argument of type 'int' is not iterable
+Input: 12345
+Iteration 25: TypeError: argument of type 'int' is not iterable
+Input: 0
+Iteration 37: TypeError: argument of type 'NoneType' is not iterable
+Input: None
+Iteration 42: TypeError: argument of type 'int' is not iterable
+Input: 12345
+Iteration 47: TypeError: argument of type 'int' is not iterable
+Input: 12345
+Iteration 50: TypeError: argument of type 'int' is not iterable
+Input: 0
+Iteration 61: TypeError: argument of type 'NoneType' is not iterable
+Input: None
+Iteration 62: TypeError: argument of type 'NoneType' is not iterable
+Input: None
+Iteration 75: TypeError: argument of type 'NoneType' is not iterable
+Input: None
+Iteration 85: TypeError: argument of type 'NoneType' is not iterable
+Input: None
+Iteration 86: TypeError: argument of type 'int' is not iterable
+Input: 0
+Iteration 90: TypeError: argument of type 'int' is not iterable
+Input: 12345
+Iteration 95: TypeError: argument of type 'bool' is not iterable
+Input: True
+Iteration 98: TypeError: argument of type 'int' is not iterable
+Input: 12345
+Completed 100 tests. Exceptions: 19
+
+Fuzzing parser.keyMiner()
+Completed 100 tests. Exceptions: 0
+
+Fuzzing parser.getKeyRecursively()
+Completed 100 tests. Exceptions: 0
+
+Fuzzing parser.getValuesRecursively()
+Completed 100 tests. Exceptions: 0
+
+Fuzzing parser.getValsFromKey()
+Completed 100 tests. Exceptions: 0

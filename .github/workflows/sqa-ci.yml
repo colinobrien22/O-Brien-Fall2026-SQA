@@ -1,0 +1,52 @@
+name: Slikube SQA Continuous Integration
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sqa-testing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-sqa.txt
+
+      - name: Prepare evidence directory
+        run: |
+          mkdir -p evidence
+          truncate -s 0 evidence/forensic_logs.jsonl
+
+      - name: Execute automated fuzzing
+        run: |
+          set -o pipefail
+          python fuzz.py | tee evidence/ci_fuzz_results.txt
+
+      - name: Validate SQA results
+        run: |
+          python validate_sqa.py
+
+      - name: Upload SQA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: slikube-sqa-evidence
+          path: evidence/
+          retention-days: 30

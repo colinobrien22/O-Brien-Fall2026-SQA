@@ -1,0 +1,26 @@
+SLIKUBE SQA VALIDATION REPORT
+==================================================
+Test cases: 1001
+Functions instrumented: 10
+Total findings: 20
+Forensic records: 2444
+Function executions: 1222
+Successful executions: 1203
+Error executions: 19
+Unmatched executions: 0
+
+VALIDATION CHECKS
+==================================================
+[PASS] Ten functions tested
+[PASS] 1001 test cases executed
+[PASS] Correct random seed
+[PASS] All expected functions instrumented
+[PASS] All forensic executions matched
+[PASS] Expected runtime exceptions
+[PASS] Expected logical failures
+[PASS] Expected total findings
+[PASS] No unexpected bug categories
+[PASS] Forensic error count matches bug report
+[PASS] All executions have valid exit statuses
+
+Overall result: PASSED
