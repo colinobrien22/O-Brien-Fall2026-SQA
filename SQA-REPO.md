@@ -23,9 +23,9 @@ The following table summarizes the implementation status of the project requirem
 | Activity | Weight | Status |
 |---|---:|---|
 | Unpack the provided Slikube project | 1% | Complete |
-| Register team information | 1% | Pending confirmation |
+| Register team information | 1% | Complete  |
 | Create GitHub repository using the required naming convention | 1% | Complete |
-| Create README.md containing team information | 2% | Pending final review |
+| Create README.md containing team information | 2% | Complete  |
 | Implement automated fuzzing of 10 Python methods | 25% | Complete |
 | Integrate forensic instrumentation into 10 Python methods | 25% | Complete |
 | Integrate continuous integration using GitHub Actions | 25% | Complete |
